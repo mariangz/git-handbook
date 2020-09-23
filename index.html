@@ -7,30 +7,33 @@
   <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/x-icon">
   <!-- <link rel="stylesheet" href="styles/reset.css"> -->
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Git Hanbook</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="item nav">
+    <div class="item navbar">
       <nav>
-        <header>
-          <h1>Git Handbook</h1>
-        </header>
-        <ul>
-          <li><a href="#What’s_a_version_control_system?">What’s a version control system?</a></li>
-          <li><a href="#What’s_a_distributed_version_control_system?">What’s a distributed version control system?</a>
-          </li>
-          <li><a href="#Why_Git?">Why Git?</a></li>
-          <li><a href="#What’s_a_repository?">What’s a repository?</a></li>
-          <li><a href="#Basic_Git_commands">Basic Git commands</a></li>
-          <li><a href="#How_GitHub_fits_in">How GitHub fits in</a></li>
-          <li><a href="#How_GitHub_works">How GitHub works</a></li>
-          <li><a href="#The_GitHub_flow">The GitHub flow</a></li>
-          <li><a href="#GitHub_and_the_command_line">GitHub and the command line</a></li>
-          <li><a href="#Models_for_collaborative_development">Models for collaborative development</a></li>
-          <li><a href="#Learn_at_your_own_pace">Learn at your own pace</a></li>
-        </ul>
+        <div class="container-nav ">
+          <header>
+            <h1>Git Handbook</h1>
+          </header>
+          <ul>
+            <li><a href="#What’s_a_version_control_system?">What’s a version control system?</a></li>
+            <li><a href="#What’s_a_distributed_version_control_system?">What’s a distributed version control system?</a>
+            </li>
+            <li><a href="#Why_Git?">Why Git?</a></li>
+            <li><a href="#What’s_a_repository?">What’s a repository?</a></li>
+            <li><a href="#Basic_Git_commands">Basic Git commands</a></li>
+            <li><a href="#How_GitHub_fits_in">How GitHub fits in</a></li>
+            <li><a href="#How_GitHub_works">How GitHub works</a></li>
+            <li><a href="#The_GitHub_flow">The GitHub flow</a></li>
+            <li><a href="#GitHub_and_the_command_line">GitHub and the command line</a></li>
+            <li><a href="#Models_for_collaborative_development">Models for collaborative development</a></li>
+            <li><a href="#Learn_at_your_own_pace">Learn at your own pace</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
 
@@ -248,29 +251,29 @@
                 </h3>
                 <pre>
             <code>
-            # download a repository on GitHub.com to our machine
-            git clone https://github.com/me/repo.git
-            
-            # change into the `repo` directory
-            cd repo
-            
-            # create a new branch to store any new changes
-            git branch my-branch
-            
-            # switch to that branch (line of development)
-            git checkout my-branch
-            
-            # make changes, for example, edit `file1.md` and `file2.md`
-            using the text editor
-            
-            # stage the changed files
-            git add file1.md file2.md
-            
-            # take a snapshot of the staging area (anything that's been added)
-            git commit -m "my snapshot"
-            
-            # push changes to github
-            git push --set-upstream origin my-branch
+# download a repository on GitHub.com to our machine
+git clone https://github.com/me/repo.git
+
+# change into the `repo` directory
+cd repo
+
+# create a new branch to store any new changes
+git branch my-branch
+
+# switch to that branch (line of development)
+git checkout my-branch
+
+# make changes, for example, edit `file1.md` and `file2.md`
+using the text editor
+
+# stage the changed files
+git add file1.md file2.md
+
+# take a snapshot of the staging area (anything that's been added)
+git commit -m "my snapshot"
+
+# push changes to github
+git push --set-upstream origin my-branch
             </code>
             </pre>
               </figure>
@@ -286,25 +289,25 @@
               <figure>
                 <pre>
                 <code>
-                  # create a new directory, and initialize it with git-specific functions git init my-repo
+# create a new directory, and initialize it with git-specific functions git init my-repo
 
-                  # change into the `my-repo` directory
-                  cd my-repo
+# change into the `my-repo` directory
+cd my-repo
 
-                  # create the first file in the project
-                  touch README.md
+# create the first file in the project
+touch README.md
 
-                  # git isn't aware of the file, stage it
-                  git add README.md
+# git isn't aware of the file, stage it
+git add README.md
 
-                  # take a snapshot of the staging area
-                  git commit -m "add README to initial commit"
+# take a snapshot of the staging area
+git commit -m "add README to initial commit"
 
-                  # provide the path for the repository you created on github
-                  git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+# provide the path for the repository you created on github
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 
-                  # push changes to github
-                  git push --set-upstream origin main
+# push changes to github
+git push --set-upstream origin main
                 </code>
               </pre>
               </figure>
@@ -314,27 +317,28 @@
               <figure>
                 <pre>
                   <code>
-                    # assumption: a project called `repo` already exists on the machine, and a new branch has been pushed to GitHub.com since the last time changes were made locally
+# assumption: a project called `repo` already exists on the machine, 
+and a new branch has been pushed to GitHub.com since the last time changes were made locally
 
-                    # change into the `repo` directory
-                    cd repo
+# change into the `repo` directory
+cd repo
 
-                    # update all remote tracking branches, and the currently checked out branch
-                    git pull
+# update all remote tracking branches, and the currently checked out branch
+git pull
 
-                    # change into the existing branch called `feature-a`
-                    git checkout feature-a
+# change into the existing branch called `feature-a`
+git checkout feature-a
 
-                    # make changes, for example, edit `file1.md` using the text editor
+# make changes, for example, edit `file1.md` using the text editor
 
-                    # stage the changed file
-                    git add file1.md
+# stage the changed file
+git add file1.md
 
-                    # take a snapshot of the staging area
-                    git commit -m "edit file1"
+# take a snapshot of the staging area
+git commit -m "edit file1"
 
-                    # push changes to github
-                    git push
+# push changes to github
+git push
                   </code>
                 </pre>
               </figure>
@@ -381,6 +385,14 @@
               <p>The GitHub team has created a library of educational videos and guides to help users continue to
                 develop their skills and build better software.
               </p>
+              <ul>
+                <li><a href="https://github.com/showcases/great-for-new-contributors">Beginner projects to explore</a>
+                </li>
+                <li><a href="https://youtube.com/githubguides">GitHub video guides</a></li>
+                <li><a href="https://lab.github.com/">GitHub on-demand training</a></li>
+                <li><a href="https://guides.github.com/">GitHub training guides</a></li>
+                <li><a href="https://lab.github.com/">GitHub training resources</a></li>
+              </ul>
             </article>
           </header>
         </section>
