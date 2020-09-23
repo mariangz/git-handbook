@@ -63,7 +63,6 @@ section {
 
 .main {
   width: 100%;
-  background-color: aqua;
   padding: 1.3rem;
 }
 
@@ -76,7 +75,6 @@ pre {
 
 @media (min-width: 768px) {
   .container {
-    background-color: pink;
     overflow: hidden;
     max-width: 1500px;
   }
@@ -85,20 +83,16 @@ pre {
     position: fixed;
     top: 0;
     left: 0;
-    border: 2px solid blue;
-    background-color: palevioletred;
     width: 280px;
   }
 
   .main {
-    border: 2px solid red;
     width: calc(100% - 280px);
     margin-left: 280px;
     padding: 2rem;
+    max-width: 1200px;
   }
 
-  /* @media (min-width: 1200px) {
-    .main {
-      width: 100%;
-    }
-  } */
+  @media (min-width: 1200px) {
+    .main {}
+  }
