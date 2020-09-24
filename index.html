@@ -5,39 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/x-icon">
-  <!-- <link rel="stylesheet" href="styles/reset.css"> -->
   <link rel="stylesheet" href="styles/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Git Hanbook</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="item navbar">
+  <div class="all-container">
+    <div class="nav-container">
       <nav>
-        <div class="container-nav ">
-          <header>
-            <h1>Git Handbook</h1>
-          </header>
-          <ul>
-            <li><a href="#What’s_a_version_control_system?">What’s a version control system?</a></li>
-            <li><a href="#What’s_a_distributed_version_control_system?">What’s a distributed version control system?</a>
-            </li>
-            <li><a href="#Why_Git?">Why Git?</a></li>
-            <li><a href="#What’s_a_repository?">What’s a repository?</a></li>
-            <li><a href="#Basic_Git_commands">Basic Git commands</a></li>
-            <li><a href="#How_GitHub_fits_in">How GitHub fits in</a></li>
-            <li><a href="#How_GitHub_works">How GitHub works</a></li>
-            <li><a href="#The_GitHub_flow">The GitHub flow</a></li>
-            <li><a href="#GitHub_and_the_command_line">GitHub and the command line</a></li>
-            <li><a href="#Models_for_collaborative_development">Models for collaborative development</a></li>
-            <li><a href="#Learn_at_your_own_pace">Learn at your own pace</a></li>
-          </ul>
-        </div>
+        <header>
+          <h1>Git Handbook</h1>
+        </header>
+        <ul class="scroll-nav">
+          <li><a href="#What’s_a_version_control_system?">What’s a version control system?</a></li>
+          <li><a href="#What’s_a_distributed_version_control_system?">What’s a distributed version control system?</a>
+          </li>
+          <li><a href="#Why_Git?">Why Git?</a></li>
+          <li><a href="#What’s_a_repository?">What’s a repository?</a></li>
+          <li><a href="#Basic_Git_commands">Basic Git commands</a></li>
+          <li><a href="#How_GitHub_fits_in">How GitHub fits in</a></li>
+          <li><a href="#How_GitHub_works">How GitHub works</a></li>
+          <li><a href="#The_GitHub_flow">The GitHub flow</a></li>
+          <li><a href="#GitHub_and_the_command_line">GitHub and the command line</a></li>
+          <li><a href="#Models_for_collaborative_development">Models for collaborative development</a></li>
+          <li><a href="#Learn_at_your_own_pace">Learn at your own pace</a></li>
+        </ul>
       </nav>
     </div>
 
-    <div class="item main">
+    <div class="main-container">
       <main>
         <!-- What’s a version control system? -->
         <section id="What’s_a_version_control_system?">
@@ -245,10 +242,10 @@
               </p>
             </article>
             <article>
+              <h3>
+                Example: Contribute to an existing repository
+              </h3>
               <figure>
-                <h3>
-                  Example: Contribute to an existing repository
-                </h3>
                 <pre>
             <code>
 # download a repository on GitHub.com to our machine

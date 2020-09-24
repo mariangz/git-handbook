@@ -7,17 +7,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: gray;
-}
-
-p {
-  line-height: 1.5;
-}
-
-ul,
-ol {
-  margin-left: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: #fff;
+  background-color: #23262A;
 }
 
 a {
@@ -25,74 +17,103 @@ a {
   color: inherit;
 }
 
-figure {
-  background-color: #e8e8e8;
-  padding: .5rem;
-}
-
-.container-nav ul {
-  list-style-type: none;
-}
-
-.container-nav {
-  padding: 1.3rem;
-  width: 100%;
-}
-
-nav {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section header {
-  margin-bottom: 1rem;
-}
-
 li {
-  padding: .6rem;
-}
-
-
-section:nth-of-type(1) {
-  margin-top: 1rem;
+  padding-bottom: 1.3rem;
 }
 
 section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  scroll-margin-top: 1rem;
 }
 
-.main {
-  width: 100%;
-  padding: 1.3rem;
+h2,
+h3 {
+  margin: 1rem 0;
+}
+
+p {
+  line-height: 1.9;
+}
+
+ul,
+ol {
+  padding: 1rem 0;
+  padding-left: 1.6rem;
+  line-height: 1.6;
+}
+
+figure {
+  background-color: #E8EAEE;
+  color: #23262A;
+  padding-left: 1rem;
+  margin: 1rem 0;
 }
 
 pre {
+  line-height: 1.5;
   overflow: auto;
 }
 
-/* ********** MEDIAQUERIE ********** */
+code {
+  padding: .3rem;
+  background-color: #E8EAEE;
+  color: #23262A;
+}
 
+/* ********** NAV ********** */
+.nav-container {
+  padding: 1.5rem;
+  display: none;
+}
 
+.nav-container header {
+  margin-bottom: 1rem;
+}
+
+.nav-container li {
+  list-style: none;
+}
+
+.nav-container a:hover,
+.nav-container a:focus {
+  color: #1F80FF;
+  text-decoration: underline;
+}
+
+/* ********** MAIN ********** */
+.main-container {
+  padding: 3rem;
+}
+
+.main-container a,
+a code {
+  color: #1F80FF;
+}
+
+/* ********** MEDIAQUERY ********** */
 @media (min-width: 768px) {
-  .container {
-    overflow: hidden;
-    max-width: 1500px;
-  }
-
-  .navbar {
+  .nav-container {
     position: fixed;
-    top: 0;
+    top: 0rem;
     left: 0;
-    width: 280px;
+    display: block;
+    width: 290px;
   }
 
-  .main {
-    width: calc(100% - 280px);
-    margin-left: 280px;
-    padding: 2rem;
-    max-width: 1200px;
+  .nav-container header {
+    text-align: center;
   }
 
-  @media (min-width: 1200px) {
-    .main {}
+  .scroll-nav {
+    padding-left: 0;
+    height: 500px;
+    overflow: scroll;
+  }
+
+  .main-container {
+    width: calc(100% - 310px);
+    margin-top: 1rem;
+    margin-left: 310px;
+    padding: 3rem;
+    max-width: 900px;
   }
