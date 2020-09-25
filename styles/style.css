@@ -112,8 +112,8 @@ a code {
 
   .main-container {
     width: calc(100% - 310px);
-    margin-top: 1rem;
     margin-left: 310px;
     padding: 3rem;
+    padding-top: .5rem;
     max-width: 900px;
   }
